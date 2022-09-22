@@ -1,19 +1,16 @@
-const { getMyLocation, getMyIp } = require('../services/location');
+const { getMyLocation } = require('../middleware/getLocation');
 
-const getLocation = async (req, res) => {
+const myLocation = async (req, res) => {
+    const location = req.location;
     try {
-        const myIp = await getMyIp();
-        if (myIp.ip) {
-            const myLocation = await getMyLocation(myIp);
-            return res.status(200).json(myLocation);
-        } else {
-            res.status(404).json("No es posible identificar su locación")
-        }
+        if (location.city) return res.status(200).json(location);
+        if (location === null) return res.status(404).json("No es posible identificar su locación");
+        
     } catch (error) {
         return res.status(404).json(error);
     }
 }
 
 module.exports = {
-    getLocation
+    myLocation
 }

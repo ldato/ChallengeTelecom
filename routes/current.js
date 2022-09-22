@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const {getLocation} = require('../middleware/getLocation');
-const {myLocation} = require('../controllers/locationController')
+const {weatherCurrent} = require('../controllers/currentController');
 
-router.get('/', getLocation, myLocation);
+router.get('/:city?', getLocation, weatherCurrent);
 
 module.exports = router;
