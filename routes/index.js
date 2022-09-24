@@ -6,7 +6,7 @@ const forecastRouter = require('./forecast');
 
 
 router.get('/', async (req, res) => {
-    res.json({message: "Ruta Base"});
+    res.status(200).json({message: "Ruta Base"});
 })
 
 router.use('/location', locationRouter);
