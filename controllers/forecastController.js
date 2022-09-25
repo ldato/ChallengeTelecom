@@ -9,7 +9,12 @@ const forecastCurrent = async (req, res) => {
             return res.status(200).json(response);
         }
         const responseCity = await forecastWeatherCity(city);
+        if (responseCity === "No se encontro la ciudad") {
+            return res.status(404).json(responseCity);
+        }
+
         return res.status(200).json(responseCity);
+        
     } catch (error) {
         return res.status(400).json({
             message: "Ha ocurrido un error",
