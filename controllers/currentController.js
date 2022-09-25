@@ -6,11 +6,15 @@ const weatherCurrent = async (req, res) => {
     try {
         if (city === undefined) {
             const response = await currentWeather(location);
-            console.log(response);
             return res.status(200).json(response);
         }
         const responseCity = await currentWeatherCity(city);
+        if (responseCity === "No se encontro la ciudad") {
+            return res.status(404).json(responseCity);
+        }
+       
         return res.status(200).json(responseCity);
+        
 
     } catch (error) {
         return res.status(400).json({

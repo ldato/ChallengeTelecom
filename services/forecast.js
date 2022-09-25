@@ -2,10 +2,8 @@ const fetch = require('node-fetch');
 const text = "No se encontro la ciudad";
 
 const forecastWeather = async (data) => {
-    console.log("Forecast Service");
     const responseMyLocation = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${data.lat}&lon=${data.lon}&appid=${process.env.API_KEY1}&&units=metric&lang=es`);
     const response = await responseMyLocation.json();
-    //console.log(response);
     return response;
 }
 

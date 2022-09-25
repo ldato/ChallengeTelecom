@@ -6,7 +6,6 @@ const forecastCurrent = async (req, res) => {
     try {
         if (city === undefined) {
             const response = await forecastWeather(location);
-            //console.log(response);
             return res.status(200).json(response);
         }
         const responseCity = await forecastWeatherCity(city);

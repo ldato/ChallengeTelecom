@@ -9,7 +9,6 @@ describe('GET/v1', () => {
           const response = await request(app).get('/v1').send();
             expect(response.statusCode).toBe(200);
             expect(response._body.message).toEqual(messageRutaBase);
-            console.log(response._body.message);
         })
 });
 
