@@ -10,18 +10,18 @@ describe('GET//v1/current/:city?', () => {
         expect(response.statusCode).toBe(200);
         expect(response._body).toBeInstanceOf(Object);
         expect(response._body.weather).toBeInstanceOf(Array);
-    });
+    }, 10000);
 
     test('should respond with a status 200 code and my current param city weather information', async () => {
         const response = await request(app).get(`/v1/current/${cityOk}`).send();
         expect(response.statusCode).toBe(200);
         expect(response._body).toBeInstanceOf(Object);
         expect(response._body.weather).toBeInstanceOf(Array);
-    });
+    }, 10000);
     
     test('should respond with a status 404 code and string message', async () => {
         const response = await request(app).get(`/v1/current/${cityWrong}`).send();
         expect(response.statusCode).toBe(404);
         expect(response._body).toEqual("No se encontro la ciudad");
-    });
+    }, 10000);
 });

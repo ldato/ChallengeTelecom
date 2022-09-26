@@ -7,5 +7,5 @@ describe('GET/v1/location', () => {
         expect(response.statusCode).toBe(200);
         expect(response._body).toBeInstanceOf(Object);
         
-    })
+    }, 10000)
 });
