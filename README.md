@@ -13,23 +13,23 @@ Rutes
     -Ruta base /v1
 
 Endpoints
-    -v1/location
+- v1/location
         Devuelve los datos de ubicación city según ip-api.
 
-    -v1/current[/city]
+- v1/current[/city]
         [City es un parámetro opcional. Devuelve los datos de ubicación city o la ubicación actual según ip-api y el estado del tiempo actual.]
 
-    -v1/forecast[/city]
+- v1/forecast[/city]
          [City es un parámetro opcional. Devuelve los datos de ubicación city o la ubicación actual según ip-api y el estado del tiempo a 5 días ]
 
 Módulos utilizados para el desarrollo:
-    -Express
-    -node-fetch
-    -nodemon
-    -cors
-    -dotenv
+- Express
+- node-fetch
+- nodemon
+- cors
+- dotenv
 
 Apis de terceros utilizadas para el desarrollo:
-    -api.openweathermap.org
-    -ip-api.com
-    -api.ipify.org
+- api.openweathermap.org
+- ip-api.com
+- api.ipify.org
