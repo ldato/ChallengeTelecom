@@ -3,11 +3,14 @@ Challenge
 Se requiere implementar una API que provea en formato JSON el estado del tiempo basado en diferentes endpoints.
 
 Instrucciones
-- Instalar dependencias mediante el comando: npm i. El ejecutar dicho comando, se instalaran las dependencias descriptas en el archivo package.json necesarias para el correcto funcionamiento de la API.
+- Instalar dependencias mediante el comando: npm install. El ejecutar dicho comando, se instalaran las dependencias descriptas en el archivo package.json necesarias para el correcto funcionamiento de la API.
 
 - Iniciar test mediante el comando: npm test. El comando correrá los 8 test desarrollados en los archivos que contiene la carpeta test.
 
 - Iniciar Servidor Web mediante el comando: npm start.
+
+Postman Collecion
+- Se agrega archivo para la importación de la collección de postman para realizar pruebas a los endpoints.
 
 Rutes
     -Ruta base /v1
